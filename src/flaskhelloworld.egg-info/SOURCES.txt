@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+src/flaskhelloworld.egg-info/PKG-INFO
+src/flaskhelloworld.egg-info/SOURCES.txt
+src/flaskhelloworld.egg-info/dependency_links.txt
+src/flaskhelloworld.egg-info/top_level.txt

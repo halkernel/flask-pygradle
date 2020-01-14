@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.linkedin.pygradle:pygradle-plugin:0.9.11"
+    }
+}
+
+apply plugin: "com.linkedin.python"
+apply plugin: "com.linkedin.python-sdist"
+
+//disabling flake8 task
+tasks.flake8.enabled = false
+
+//setting up the tests directory
+//python{
+//    testDir= file('tests')
+//}
+
+
+//example of reimporting the modules
+//instead of get them inside a setup.py
+dependencies{
+    python  'pypi:Werkzeug:0.7',
+            'pypi:Jinja2:2.4',
+            'pypi:itsdangerous:0.21',
+            'pypi:click:2.0'
+}
+
+repositories {
+    pyGradlePyPi()
+}
